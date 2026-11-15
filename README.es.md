@@ -24,14 +24,16 @@
   <a href="README.pt.md">Português</a>
 </p>
 
-Plugin de DSH. Edita directamente la última respuesta del modelo y continúa la conversación desde tu versión. Los registros de herramientas se conservan intactos; la conversación original se mantiene.
+El modelo leyó ocho archivos, ejecutó tres comandos y se equivocó en un número de la conclusión. Regenerar significa volver a ejecutar todas las herramientas.
+
+Edita la respuesta directamente. Los registros de herramientas se conservan intactos y la conversación continúa desde tu versión.
 
 ## Funciones
 
-- **Editar respuesta** — icono de lápiz junto a la respuesta. Reescribe el texto o el razonamiento; al guardar se crea una nueva versión y la conversación continúa desde ella. `Ctrl / Cmd + Enter` guarda, `Esc` cancela.
-- **Editar pregunta** — icono de lápiz al final del turno. Cambia esta pregunta y regenera; también a mitad de generación: la respuesta anterior se detiene sola.
+- **Editar respuesta** — icono de lápiz junto a la respuesta. Texto y razonamiento son editables; al guardar se crea una nueva versión con todo el registro de herramientas. `Ctrl / Cmd + Enter` guarda, `Esc` cancela.
+- **Editar pregunta** — icono de lápiz al final del turno. Si la generación va por mal camino, cambia la pregunta y reinicia al instante: la respuesta anterior se detiene sola, sin esperar a que termine.
 - **Regenerar** — icono de reintento al final del turno. La misma pregunta, el turno se ejecuta de nuevo.
-- **Cambiar versión** — ‹n/m› bajo el turno alterna entre versiones de la misma conversación, incluidas las archivadas. Una sola entrada por conversación en la barra lateral.
+- **Cambiar versión** — ‹n/m› bajo el turno. Cada edición es una versión; vuelve atrás si te equivocas, incluidas las archivadas. Una sola entrada por conversación en la barra lateral, sin desorden.
 
 ## Interfaz
 
@@ -45,7 +47,7 @@ Plugin de DSH. Edita directamente la última respuesta del modelo y continúa la
   <img src="docs/how-it-works.png" alt="Cómo funciona: editar respuesta → nueva versión → continuar desde tu versión, registros de herramientas conservados" width="100%">
 </p>
 
-Cada guardado crea una nueva rama con el registro completo de herramientas. Vuelve a una versión anterior cuando quieras.
+Editar nunca toca la conversación original. Cada guardado crea una nueva rama con cada consulta, comando y cambio de archivo conservado: solo reescribes la respuesta final, la tarea no empieza de cero. Si no te convence, ‹n/m› vuelve a cualquier versión.
 
 ## Instalación
 

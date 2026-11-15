@@ -10,7 +10,7 @@
     <text x="31" y="46" fill="#e6edf3" font-size="16">1</text>
     <text x="64" y="46" fill="#e6edf3" font-size="19" font-weight="600">模型给出回复</text>
     <rect x="24" y="70" width="272" height="44" rx="8" fill="#1c2129"/>
-    <text x="40" y="97" fill="#8b949e" font-size="15">对回复不满意</text>
+    <text x="40" y="97" fill="#8b949e" font-size="15">结论写错、措辞不好</text>
     <rect x="24" y="126" width="272" height="44" rx="8" fill="#1c2129"/>
     <text x="40" y="153" fill="#8b949e" font-size="15">不用整轮重新生成</text>
   </g>

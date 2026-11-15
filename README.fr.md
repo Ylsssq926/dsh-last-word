@@ -24,14 +24,16 @@
   <a href="README.pt.md">Português</a>
 </p>
 
-Plugin DSH. Modifiez directement la dernière réponse du modèle et poursuivez la conversation depuis votre version. Les traces d’outils sont conservées intactes ; la conversation d’origine est gardée.
+Le modèle a lu huit fichiers, exécuté trois commandes, et s’est trompé sur un nombre dans la conclusion. Régénérer signifie relancer tous les outils.
+
+Modifiez directement la réponse. Les traces d’outils sont conservées intactes et la conversation continue depuis votre version.
 
 ## Fonctionnalités
 
-- **Modifier la réponse** — icône crayon à côté de la réponse. Réécrivez le texte ou le raisonnement ; l’enregistrement crée une nouvelle version et la conversation repart de là. `Ctrl / Cmd + Enter` enregistre, `Esc` annule.
-- **Modifier la question** — icône crayon en fin de tour. Changez cette question et régénérez ; possible en pleine génération, l’ancienne réponse s’arrête automatiquement.
+- **Modifier la réponse** — icône crayon à côté de la réponse. Texte et raisonnement sont modifiables ; l’enregistrement crée une nouvelle version avec tout l’historique des outils. `Ctrl / Cmd + Enter` enregistre, `Esc` annule.
+- **Modifier la question** — icône crayon en fin de tour. Si la génération part dans la mauvaise direction, changez la question et repartez aussitôt : l’ancienne réponse s’arrête d’elle-même, sans attendre la fin.
 - **Régénérer** — icône de réessai en fin de tour. Même question, le tour repart.
-- **Changer de version** — ‹n/m› sous le tour bascule entre les versions d’une même conversation, y compris archivées. Une seule entrée par conversation dans la barre latérale.
+- **Changer de version** — ‹n/m› sous le tour. Chaque modification est une version ; revenez en arrière en cas d’erreur, y compris les versions archivées. Une seule entrée par conversation dans la barre latérale, jamais de désordre.
 
 ## Interface
 
@@ -45,7 +47,7 @@ Plugin DSH. Modifiez directement la dernière réponse du modèle et poursuivez 
   <img src="docs/how-it-works.png" alt="Fonctionnement : modifier la réponse → nouvelle version → continuer depuis votre version, traces d’outils conservées" width="100%">
 </p>
 
-Chaque enregistrement crée une nouvelle branche avec l’historique complet des outils. Revenez à une version antérieure à tout moment.
+Modifier ne touche jamais la conversation d’origine. Chaque enregistrement crée une nouvelle branche avec chaque consultation, commande et modification de fichier conservée : vous ne réécrivez que la réponse finale, la tâche ne repart pas de zéro. Si le résultat ne convient pas, ‹n/m› revient à n’importe quelle version.
 
 ## Installation
 

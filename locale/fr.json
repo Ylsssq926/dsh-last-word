@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "The Last Word",
-    "description": "Modifiez la dernière réponse du modèle, conservez les traces d’outils et continuez depuis votre version."
+    "description": "Modifiez directement la réponse du modèle, sans relancer les outils, et continuez depuis votre version."
   }
 }

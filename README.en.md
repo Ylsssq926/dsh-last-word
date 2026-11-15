@@ -24,14 +24,16 @@
   <a href="README.pt.md">Português</a>
 </p>
 
-DSH plugin. Edit the model's last reply directly and continue the conversation from your version. Tool-call records stay intact; the original conversation is kept.
+The model read eight files, ran three commands, and got one number wrong in the conclusion. Regenerating means running every tool again.
+
+Just edit the reply. Tool records stay intact, and the conversation continues from your version.
 
 ## Features
 
-- **Edit reply** — pencil icon beside the reply. Rewrite the body or reasoning text; saving creates a new version and the conversation continues from it. `Ctrl / Cmd + Enter` saves, `Esc` cancels.
-- **Edit prompt** — pencil icon at the turn tail. Change this prompt and regenerate; works mid-generation too — the old reply stops automatically.
+- **Edit reply** — pencil icon beside the reply. Body and reasoning text are both editable; saving creates a new version with the full tool record carried over. `Ctrl / Cmd + Enter` saves, `Esc` cancels.
+- **Edit prompt** — pencil icon at the turn tail. If the generation goes off track, change the prompt and restart immediately — the old reply stops on its own, no waiting for it to finish.
 - **Regenerate** — retry icon at the turn tail. Same prompt, run the turn again.
-- **Switch versions** — ‹n/m› under the turn flips between versions of the same conversation, archived ones included. One sidebar entry per conversation.
+- **Switch versions** — ‹n/m› under the turn. Every edit is a version; switch back if you mess up, archived ones included. One sidebar entry per conversation, so it never gets cluttered.
 
 ## Interface
 
@@ -45,7 +47,7 @@ DSH plugin. Edit the model's last reply directly and continue the conversation f
   <img src="docs/how-it-works.png" alt="How it works: edit reply → new version → continue from your version, tool records preserved" width="100%">
 </p>
 
-Each save creates a new branch with the full tool record carried over. Switch back to an older version anytime.
+Editing never touches the original conversation. Each save creates a new branch with every lookup, command and file change carried over — you only rewrite the final answer, the task never starts over. Not happy with it? ‹n/m› switches back to any version.
 
 ## Install
 

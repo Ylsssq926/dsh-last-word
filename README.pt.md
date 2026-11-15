@@ -24,14 +24,16 @@
   Português ·
 </p>
 
-Plugin DSH. Edite diretamente a última resposta do modelo e continue a conversa a partir da sua versão. Os registros de ferramentas são mantidos intactos; a conversa original é preservada.
+O modelo leu oito arquivos, executou três comandos e errou um número na conclusão. Regenerar significa executar todas as ferramentas de novo.
+
+Edite a resposta diretamente. Os registros de ferramentas são mantidos intactos e a conversa continua a partir da sua versão.
 
 ## Funções
 
-- **Editar resposta** — ícone de lápis ao lado da resposta. Reescreva o texto ou o raciocínio; ao salvar, uma nova versão é criada e a conversa continua a partir dela. `Ctrl / Cmd + Enter` salva, `Esc` cancela.
-- **Editar pergunta** — ícone de lápis no fim do turno. Mude esta pergunta e regenere; funciona no meio da geração — a resposta anterior para sozinha.
+- **Editar resposta** — ícone de lápis ao lado da resposta. Texto e raciocínio são editáveis; ao salvar, uma nova versão é criada com todo o registro de ferramentas. `Ctrl / Cmd + Enter` salva, `Esc` cancela.
+- **Editar pergunta** — ícone de lápis no fim do turno. Se a geração for pelo caminho errado, mude a pergunta e recomece na hora — a resposta anterior para sozinha, sem esperar terminar.
 - **Regenerar** — ícone de repetição no fim do turno. A mesma pergunta, o turno roda de novo.
-- **Trocar versão** — ‹n/m› sob o turno alterna entre versões da mesma conversa, incluindo arquivadas. Uma entrada por conversa na barra lateral.
+- **Trocar versão** — ‹n/m› sob o turno. Cada edição é uma versão; errou, volte atrás, incluindo as arquivadas. Uma entrada por conversa na barra lateral, sem bagunça.
 
 ## Interface
 
@@ -45,7 +47,7 @@ Plugin DSH. Edite diretamente a última resposta do modelo e continue a conversa
   <img src="docs/how-it-works.png" alt="Como funciona: editar resposta → nova versão → continuar da sua versão, registros de ferramentas mantidos" width="100%">
 </p>
 
-Cada salvamento cria um novo ramo com o registro completo de ferramentas. Volte a uma versão anterior quando quiser.
+Editar nunca toca a conversa original. Cada salvamento cria um novo ramo com cada consulta, comando e alteração de arquivo mantidos — você reescreve só a resposta final, a tarefa não recomeça do zero. Se não gostar, ‹n/m› volta a qualquer versão.
 
 ## Instalação
 

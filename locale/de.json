@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "The Last Word",
-    "description": "Bearbeite die letzte Antwort des Modells, behalte Tool-Datensätze und mach ab deiner Version weiter."
+    "description": "Bearbeite die Modellantwort direkt — ohne Tools neu auszuführen, ab deiner Version weiter."
   }
 }

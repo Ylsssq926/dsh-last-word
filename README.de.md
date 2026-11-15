@@ -24,14 +24,16 @@
   <a href="README.pt.md">Português</a>
 </p>
 
-DSH-Plugin. Bearbeite die letzte Antwort des Modells direkt und setze das Gespräch ab deiner Version fort. Tool-Datensätze bleiben vollständig erhalten; das ursprüngliche Gespräch bleibt bestehen.
+Das Modell hat acht Dateien gelesen, drei Befehle ausgeführt und sich bei einer Zahl in der Schlussfolgerung vertan. Neu generieren heißt: alle Tools laufen noch einmal.
+
+Bearbeite die Antwort direkt. Die Tool-Datensätze bleiben vollständig erhalten, und das Gespräch wird ab deiner Version fortgesetzt.
 
 ## Funktionen
 
-- **Antwort bearbeiten** — Stift-Symbol neben der Antwort. Text oder Denktext umschreiben; beim Speichern entsteht eine neue Version, ab der weitergesprochen wird. `Strg / Cmd + Enter` speichert, `Esc` bricht ab.
-- **Frage bearbeiten** — Stift-Symbol am Zug-Ende. Diese Frage ändern und neu generieren; auch mitten in der Generierung — die alte Antwort stoppt automatisch.
+- **Antwort bearbeiten** — Stift-Symbol neben der Antwort. Text und Denktext sind bearbeitbar; beim Speichern entsteht eine neue Version mit dem vollständigen Tool-Verlauf. `Strg / Cmd + Enter` speichert, `Esc` bricht ab.
+- **Frage bearbeiten** — Stift-Symbol am Zug-Ende. Läuft die Generierung in die falsche Richtung, ändere die Frage und starte sofort neu — die alte Antwort stoppt von selbst, ohne auf das Ende zu warten.
 - **Neu generieren** — Wiederholen-Symbol am Zug-Ende. Gleiche Frage, der Zug läuft erneut.
-- **Version wechseln** — ‹n/m› unter dem Zug wechselt zwischen Versionen desselben Gesprächs, auch archivierte. Ein Sidebar-Eintrag pro Gespräch.
+- **Version wechseln** — ‹n/m› unter dem Zug. Jede Bearbeitung ist eine Version; bei einem Fehler einfach zurückwechseln, auch zu archivierten. Ein Sidebar-Eintrag pro Gespräch, keine Unordnung.
 
 ## Oberfläche
 
@@ -45,7 +47,7 @@ DSH-Plugin. Bearbeite die letzte Antwort des Modells direkt und setze das Gespr�
   <img src="docs/how-it-works.png" alt="Funktionsweise: Antwort bearbeiten → neue Version → ab deiner Version weiter, Tool-Datensätze bleiben" width="100%">
 </p>
 
-Jedes Speichern erzeugt einen neuen Zweig mit dem vollständigen Tool-Verlauf. Jederzeit zu einer älteren Version zurückwechseln.
+Bearbeiten berührt nie das ursprüngliche Gespräch. Jedes Speichern erzeugt einen neuen Zweig mit jeder Recherche, jedem Befehl und jeder Dateiänderung im Verlauf — du schreibst nur die finale Antwort um, die Aufgabe beginnt nicht von vorn. Passt das Ergebnis nicht, wechselt ‹n/m› zu jeder beliebigen Version zurück.
 
 ## Installation
 
