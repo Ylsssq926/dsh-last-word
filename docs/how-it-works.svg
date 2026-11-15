@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" font-family="'Segoe UI','Microsoft YaHei','PingFang SC',sans-serif">
+  <rect width="1200" height="470" rx="16" fill="#0d1117"/>
+  <text x="60" y="66" fill="#e6edf3" font-size="26" font-weight="600">一次编辑发生了什么</text>
+  <text x="60" y="96" fill="#8b949e" font-size="16">改的是最终回复，任务不用从头再来</text>
+
+  <!-- card 1 -->
+  <g transform="translate(60,130)">
+    <rect width="320" height="200" rx="12" fill="#161b22" stroke="#2d333b"/>
+    <circle cx="36" cy="40" r="16" fill="#315f9f"/>
+    <text x="31" y="46" fill="#e6edf3" font-size="16">1</text>
+    <text x="64" y="46" fill="#e6edf3" font-size="19" font-weight="600">模型回复只是草稿</text>
+    <rect x="24" y="70" width="272" height="44" rx="8" fill="#1c2129"/>
+    <text x="40" y="97" fill="#8b949e" font-size="15">说教太多？结论不对？</text>
+    <rect x="24" y="126" width="272" height="44" rx="8" fill="#1c2129"/>
+    <text x="40" y="153" fill="#8b949e" font-size="15">不用重新生成整轮</text>
+  </g>
+
+  <!-- arrow 1 -->
+  <g stroke="#4d8dff" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M392 230h56"/>
+    <path d="M440 222l10 8-10 8"/>
+  </g>
+
+  <!-- card 2 -->
+  <g transform="translate(460,130)">
+    <rect width="320" height="200" rx="12" fill="#161b22" stroke="#4d8dff" stroke-opacity="0.6"/>
+    <circle cx="36" cy="40" r="16" fill="#315f9f"/>
+    <text x="31" y="46" fill="#e6edf3" font-size="16">2</text>
+    <text x="64" y="46" fill="#e6edf3" font-size="19" font-weight="600">你改最终回复</text>
+    <rect x="24" y="70" width="272" height="86" rx="8" fill="#1c2129"/>
+    <text x="40" y="98" fill="#e6edf3" font-size="15">正文或思考文本，直接改写</text>
+    <text x="40" y="126" fill="#8b949e" font-size="14">Ctrl + Enter 保存</text>
+    <g transform="translate(252,160)" stroke="#b9e1ff" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M0 16h14"/>
+      <path d="M11 2a3 3 0 0 1 4 4L5 16l-5 1 1-5z"/>
+    </g>
+  </g>
+
+  <!-- arrow 2 -->
+  <g stroke="#4d8dff" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M792 230h56"/>
+    <path d="M840 222l10 8-10 8"/>
+  </g>
+
+  <!-- card 3 -->
+  <g transform="translate(860,130)">
+    <rect width="280" height="200" rx="12" fill="#161b22" stroke="#2d333b"/>
+    <circle cx="36" cy="40" r="16" fill="#315f9f"/>
+    <text x="31" y="46" fill="#e6edf3" font-size="16">3</text>
+    <text x="64" y="46" fill="#e6edf3" font-size="19" font-weight="600">从你的版本继续</text>
+    <rect x="24" y="70" width="232" height="44" rx="8" fill="#1c2129"/>
+    <text x="40" y="97" fill="#e6edf3" font-size="15">新版本接着干活</text>
+    <rect x="24" y="126" width="232" height="44" rx="8" fill="#1c2129"/>
+    <text x="40" y="153" fill="#8b949e" font-size="15">‹n/m› 随手切回任何一版</text>
+  </g>
+
+  <!-- preservation bar -->
+  <g transform="translate(60,362)">
+    <rect width="1080" height="64" rx="12" fill="#161b22" stroke="#2d333b"/>
+    <g fill="#3fb950" font-size="16">
+      <text x="36" y="39">✓</text>
+      <text x="296" y="39">✓</text>
+      <text x="576" y="39">✓</text>
+      <text x="836" y="39">✓</text>
+    </g>
+    <g fill="#e6edf3" font-size="16">
+      <text x="62" y="39">工具记录一条不丢</text>
+      <text x="322" y="39">查过的资料还在</text>
+      <text x="602" y="39">跑过的命令还在</text>
+      <text x="862" y="39">原对话永远留底</text>
+    </g>
+  </g>
+</svg>

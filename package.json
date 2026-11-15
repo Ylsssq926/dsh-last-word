@@ -13,7 +13,7 @@
     "branch",
     "last-word"
   ],
-  "license": "MIT",
+  "license": "Apache-2.0",
   "engines": {
     "dsh": ">=0.2.2-rc.1 <0.3.0-0"
   },
@@ -35,7 +35,9 @@
     "client.js",
     "cordis.patch.yml",
     "locale/*.json",
-    "icon.svg"
+    "icon.svg",
+    "LICENSE",
+    "NOTICE"
   ],
   "dsh": {
     "bundle": {
