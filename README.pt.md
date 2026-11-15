@@ -4,8 +4,6 @@
 
 <h1 align="center">The Last Word · 最终解释权</h1>
 
-<p align="center"><strong>A última palavra é sua.</strong></p>
-
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="Apache-2.0"></a>
   <img src="https://img.shields.io/badge/version-0.3.1-brightgreen.svg" alt="0.3.1">
@@ -23,42 +21,31 @@
   <a href="README.fr.md">Français</a> ·
   <a href="README.de.md">Deutsch</a> ·
   <a href="README.ru.md">Русский</a> ·
-  Português
+  Português ·
 </p>
 
-A resposta do modelo é um rascunho. Apague o sermão, fique com a conclusão e volte ao trabalho — sem regenerar, sem queimar tokens duas vezes.
+Plugin DSH. Edite diretamente a última resposta do modelo e continue a conversa a partir da sua versão. Os registros de ferramentas são mantidos intactos; a conversa original é preservada.
 
-## Três ações
+## Funções
 
-| Ação | Entrada | Resultado |
-|---|---|---|
-| Editar resposta | Ícone de lápis ao lado da resposta | Reescreva a resposta final (corpo ou raciocínio) e continue |
-| Editar pergunta | Ícone de lápis no fim do turno | Mude esta pergunta e regenere |
-| Regenerar | Ícone de repetição no fim do turno | A mesma pergunta, o turno roda de novo |
+- **Editar resposta** — ícone de lápis ao lado da resposta. Reescreva o texto ou o raciocínio; ao salvar, uma nova versão é criada e a conversa continua a partir dela. `Ctrl / Cmd + Enter` salva, `Esc` cancela.
+- **Editar pergunta** — ícone de lápis no fim do turno. Mude esta pergunta e regenere; funciona no meio da geração — a resposta anterior para sozinha.
+- **Regenerar** — ícone de repetição no fim do turno. A mesma pergunta, o turno roda de novo.
+- **Trocar versão** — ‹n/m› sob o turno alterna entre versões da mesma conversa, incluindo arquivadas. Uma entrada por conversa na barra lateral.
 
-## Por que instalar
-
-**Edite a resposta sem reexecutar as ferramentas.** Cada consulta, comando e alteração de arquivo fica registrado. Você reescreve só a resposta final — a tarefa nunca recomeça do zero.
-
-**Troque de versão como quem folheia rascunhos.** Uma entrada na barra lateral por conversa; alterne versões com ‹n/m› sob o turno, incluindo as arquivadas. Errou? Volte atrás.
-
-**Reescreva a pergunta no meio da resposta.** O modelo está saindo do trilho? Não espere terminar — mude a pergunta e recomece na hora. Respostas em streaming param sozinhas, sem queimar tokens em algo que ninguém vai ler.
-
-**A conversa original está sempre lá.** Cada edição guarda uma cópia; troque de versão quando quiser.
-
-## A interface
+## Interface
 
 <p align="center">
-  <img src="docs/ui-preview.png" alt="Prévia da interface: ícones ao lado da resposta, anel de versões e diálogo de edição" width="100%">
+  <img src="docs/ui-preview.png" alt="Interface: entradas de edição ao lado da resposta, anel de versões e diálogo de edição" width="100%">
 </p>
 
-As entradas ficam ao lado da resposta, sem interromper a leitura. Temas claro / escuro seguem o host; a interface fala 8 idiomas.
-
-## O que uma edição faz
+## Como funciona
 
 <p align="center">
-  <img src="docs/how-it-works.png" alt="Fluxo de edição: rascunho → reescrita → continuar da sua versão, registros de ferramentas mantidos" width="100%">
+  <img src="docs/how-it-works.png" alt="Como funciona: editar resposta → nova versão → continuar da sua versão, registros de ferramentas mantidos" width="100%">
 </p>
+
+Cada salvamento cria um novo ramo com o registro completo de ferramentas. Volte a uma versão anterior quando quiser.
 
 ## Instalação
 
@@ -66,36 +53,28 @@ As entradas ficam ao lado da resposta, sem interromper a leitura. Temas claro / 
 dsh plugin --profile web add github:Ylsssq926/dsh-last-word
 ```
 
-Para o app desktop use `--profile desktop`. Reinicie o DSH e ative o plugin.
+Use `--profile desktop` para o app desktop. Reinicie o DSH e ative o plugin.
 
-Para desenvolvimento local também dá para linkar um diretório:
+Para desenvolvimento local, vincule um diretório:
 
 ```bash
 dsh plugin --profile web add link:/caminho/absoluto/para/model-response-editor
 ```
 
-## Detalhes cuidadosos
-
-- O diálogo foca sozinho; `Ctrl / Cmd + Enter` salva, `Esc` cancela.
-- Corpo e raciocínio editam separados, um clique para alternar.
-- O anel ‹n/m› mostra a versão atual; arquivadas voltam direto.
-- Editar a pergunta durante a geração para a resposta antiga automaticamente.
-- Erros dizem o que fazer em seguida, sem jargão.
-
 ## Compatibilidade
 
 - DSH `>=0.2.2-rc.1 <0.3.0`, web e desktop.
-- Idiomas da interface: 中文, English, 日本語, Español, Français, Deutsch, Русский, Português.
+- Idiomas da interface: 中文, English, 日本語, Español, Français, Deutsch, Русский, Português. O tema segue o host.
 
 ## Desenvolvimento
 
 ```bash
 pnpm install
-npm test   # 9 grupos de regressão: ramificação, versões, barra lateral, navegação, registros…
+npm test
 ```
 
 ## Licença
 
-Apache-2.0. Ao referenciar ou redistribuir este plugin, mantenha a atribuição em [LICENSE](LICENSE) e [NOTICE](NOTICE).
+Apache-2.0. Mantenha a atribuição de [LICENSE](LICENSE) e [NOTICE](NOTICE) ao referenciar ou redistribuir.
 
 掠蓝 · Grupo QQ: 676475076

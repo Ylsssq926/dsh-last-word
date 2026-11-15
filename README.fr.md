@@ -4,8 +4,6 @@
 
 <h1 align="center">The Last Word · 最终解释权</h1>
 
-<p align="center"><strong>Le dernier mot vous appartient.</strong></p>
-
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="Apache-2.0"></a>
   <img src="https://img.shields.io/badge/version-0.3.1-brightgreen.svg" alt="0.3.1">
@@ -26,39 +24,28 @@
   <a href="README.pt.md">Português</a>
 </p>
 
-La réponse du modèle n’est qu’un brouillon. Supprimez le sermon, gardez la conclusion, reprenez le travail — sans régénération, sans brûler des tokens deux fois.
+Plugin DSH. Modifiez directement la dernière réponse du modèle et poursuivez la conversation depuis votre version. Les traces d’outils sont conservées intactes ; la conversation d’origine est gardée.
 
-## Trois actions
+## Fonctionnalités
 
-| Action | Entrée | Résultat |
-|---|---|---|
-| Modifier la réponse | Icône crayon près de la réponse | Réécrivez la réponse finale (corps ou raisonnement) et continuez |
-| Modifier la question | Icône crayon en fin de tour | Changez cette question et régénérez |
-| Régénérer | Icône de reprise en fin de tour | Même question, le tour recommence |
+- **Modifier la réponse** — icône crayon à côté de la réponse. Réécrivez le texte ou le raisonnement ; l’enregistrement crée une nouvelle version et la conversation repart de là. `Ctrl / Cmd + Enter` enregistre, `Esc` annule.
+- **Modifier la question** — icône crayon en fin de tour. Changez cette question et régénérez ; possible en pleine génération, l’ancienne réponse s’arrête automatiquement.
+- **Régénérer** — icône de réessai en fin de tour. Même question, le tour repart.
+- **Changer de version** — ‹n/m› sous le tour bascule entre les versions d’une même conversation, y compris archivées. Une seule entrée par conversation dans la barre latérale.
 
-## Pourquoi l’installer
-
-**Modifiez la réponse sans relancer les outils.** Chaque recherche, commande et modification de fichier reste enregistrée. Vous ne réécrivez que la réponse finale : la tâche ne repart jamais de zéro.
-
-**Changez de version comme on feuillette des brouillons.** Une seule entrée dans la barre latérale par conversation ; passez d’une version à l’autre avec ‹n/m› sous le tour, y compris les versions archivées. Une erreur ? Revenez en arrière.
-
-**Réécrivez la question en pleine réponse.** Le modèle dérive ? N’attendez pas la fin : changez la question et repartez aussitôt. Les réponses en streaming s’arrêtent d’elles-mêmes, sans brûler des tokens pour une réponse que personne ne lira.
-
-**La conversation d’origine est toujours là.** Chaque modification garde une copie ; changez de version quand vous voulez.
-
-## L’interface
+## Interface
 
 <p align="center">
-  <img src="docs/ui-preview.png" alt="Aperçu : icônes près de la réponse, anneau de versions et dialogue d’édition" width="100%">
+  <img src="docs/ui-preview.png" alt="Interface : entrées d’édition à côté de la réponse, anneau de versions et dialogue d’édition" width="100%">
 </p>
 
-Les entrées sont juste à côté de la réponse, sans casser la lecture. Thèmes sombre / clair suivis depuis l’hôte ; l’interface parle 8 langues.
-
-## Ce que fait une modification
+## Fonctionnement
 
 <p align="center">
-  <img src="docs/how-it-works.png" alt="Flux d’édition : brouillon → réécriture → continuer depuis votre version, traces d’outils conservées" width="100%">
+  <img src="docs/how-it-works.png" alt="Fonctionnement : modifier la réponse → nouvelle version → continuer depuis votre version, traces d’outils conservées" width="100%">
 </p>
+
+Chaque enregistrement crée une nouvelle branche avec l’historique complet des outils. Revenez à une version antérieure à tout moment.
 
 ## Installation
 
@@ -66,36 +53,28 @@ Les entrées sont juste à côté de la réponse, sans casser la lecture. Thème
 dsh plugin --profile web add github:Ylsssq926/dsh-last-word
 ```
 
-Pour l’application de bureau, utilisez `--profile desktop`. Redémarrez DSH et activez le plugin.
+`--profile desktop` pour l’application de bureau. Redémarrez DSH et activez le plugin.
 
-En développement local, vous pouvez aussi lier un dossier :
+En développement local, liez un répertoire :
 
 ```bash
 dsh plugin --profile web add link:/chemin/absolu/vers/model-response-editor
 ```
 
-## Détails soignés
-
-- Le dialogue prend le focus automatiquement ; `Ctrl / Cmd + Entrée` enregistre, `Échap` annule.
-- Corps et raisonnement se modifient séparément, un clic pour basculer.
-- L’anneau ‹n/m› indique la version courante ; les versions archivées reviennent directement.
-- Modifier la question pendant la génération arrête l’ancienne réponse.
-- Les erreurs disent quoi faire ensuite, sans jargon.
-
 ## Compatibilité
 
 - DSH `>=0.2.2-rc.1 <0.3.0`, web et bureau.
-- Langues de l’interface : 中文, English, 日本語, Español, Français, Deutsch, Русский, Português.
+- Langues de l’interface : 中文, English, 日本語, Español, Français, Deutsch, Русский, Português. Le thème suit l’hôte.
 
 ## Développement
 
 ```bash
 pnpm install
-npm test   # 9 groupes de régression : branches, versions, barre latérale, navigation, traces d’outils…
+npm test
 ```
 
 ## Licence
 
-Apache-2.0. Si vous référencez ou redistribuez ce plugin, conservez l’attribution dans [LICENSE](LICENSE) et [NOTICE](NOTICE).
+Apache-2.0. Conservez l’attribution de [LICENSE](LICENSE) et [NOTICE](NOTICE) en cas de référence ou de redistribution.
 
 掠蓝 · Groupe QQ : 676475076

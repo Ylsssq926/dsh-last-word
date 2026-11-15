@@ -4,8 +4,6 @@
 
 <h1 align="center">The Last Word · 最终解释权</h1>
 
-<p align="center"><strong>You get the last word.</strong></p>
-
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="Apache-2.0"></a>
   <img src="https://img.shields.io/badge/version-0.3.1-brightgreen.svg" alt="0.3.1">
@@ -26,39 +24,28 @@
   <a href="README.pt.md">Português</a>
 </p>
 
-The model's reply is a draft. Delete the lecture, keep the conclusion, get back to work — no regeneration, no second burn of tokens.
+DSH plugin. Edit the model's last reply directly and continue the conversation from your version. Tool-call records stay intact; the original conversation is kept.
 
-## Three actions
+## Features
 
-| Action | Entry | Result |
-|---|---|---|
-| Edit reply | Pencil icon beside the reply | Rewrite the final reply (body or reasoning) and continue |
-| Edit prompt | Pencil icon at the turn tail | Change this prompt and regenerate |
-| Regenerate | Retry icon at the turn tail | Same prompt, run the turn again |
+- **Edit reply** — pencil icon beside the reply. Rewrite the body or reasoning text; saving creates a new version and the conversation continues from it. `Ctrl / Cmd + Enter` saves, `Esc` cancels.
+- **Edit prompt** — pencil icon at the turn tail. Change this prompt and regenerate; works mid-generation too — the old reply stops automatically.
+- **Regenerate** — retry icon at the turn tail. Same prompt, run the turn again.
+- **Switch versions** — ‹n/m› under the turn flips between versions of the same conversation, archived ones included. One sidebar entry per conversation.
 
-## Why install it
-
-**Edit the reply, don't re-run the tools.** Every lookup, command and file change stays on record. You only rewrite the final answer — the task never starts over.
-
-**Switch versions like flipping drafts.** One sidebar entry per conversation; flip between versions with ‹n/m› under the turn, archived ones included. Changed your mind? Flip back.
-
-**Rewrite the prompt mid-answer.** See the model going off track? Don't wait for it to finish — change the prompt and start over. Streaming replies stop automatically, so no tokens burn on an answer nobody will read.
-
-**The original conversation is always there.** Every edit keeps a copy; switch to another version whenever you like.
-
-## The interface
+## Interface
 
 <p align="center">
-  <img src="docs/ui-preview.png" alt="UI preview: icon entries beside the reply, version ring and edit dialog" width="100%">
+  <img src="docs/ui-preview.png" alt="Interface: edit entries beside the reply, version ring and edit dialog" width="100%">
 </p>
 
-Entries sit right beside the reply without breaking your reading flow. Dark / light themes follow the host; the interface speaks 8 languages.
-
-## What one edit does
+## How it works
 
 <p align="center">
-  <img src="docs/how-it-works.png" alt="Edit flow: draft → rewrite → continue from your version, tool records preserved" width="100%">
+  <img src="docs/how-it-works.png" alt="How it works: edit reply → new version → continue from your version, tool records preserved" width="100%">
 </p>
+
+Each save creates a new branch with the full tool record carried over. Switch back to an older version anytime.
 
 ## Install
 
@@ -68,34 +55,26 @@ dsh plugin --profile web add github:Ylsssq926/dsh-last-word
 
 Use `--profile desktop` for the desktop app. Restart DSH and enable the plugin.
 
-For local development you can link a directory instead:
+For local development, link a directory:
 
 ```bash
 dsh plugin --profile web add link:/absolute/path/to/model-response-editor
 ```
 
-## Thoughtful details
-
-- The dialog autofocuses; `Ctrl / Cmd + Enter` saves, `Esc` cancels.
-- Body and reasoning text edit separately, one click to switch.
-- The ‹n/m› ring shows which version you're on; archived versions switch back directly.
-- Editing the prompt mid-generation stops the old reply automatically.
-- Errors tell you what to do next, not jargon.
-
 ## Compatibility
 
 - DSH `>=0.2.2-rc.1 <0.3.0`, web and desktop.
-- Interface languages: 中文, English, 日本語, Español, Français, Deutsch, Русский, Português.
+- Interface languages: 中文, English, 日本語, Español, Français, Deutsch, Русский, Português. Theme follows the host.
 
 ## Development
 
 ```bash
 pnpm install
-npm test   # 9 regression groups: branching, versions, sidebar, navigation, tool records…
+npm test
 ```
 
 ## License
 
-Apache-2.0. If you reference or redistribute this plugin, keep the attribution in [LICENSE](LICENSE) and [NOTICE](NOTICE).
+Apache-2.0. Keep the attribution in [LICENSE](LICENSE) and [NOTICE](NOTICE) when referencing or redistributing.
 
 掠蓝 · QQ group: 676475076

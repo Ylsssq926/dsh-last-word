@@ -3,7 +3,7 @@
   "version": "0.3.1",
   "private": true,
   "type": "module",
-  "description": "The Last Word for DSH: edit the model's reply, keep every tool record, continue from your version. 本对话最终解释权归你所有。",
+  "description": "DSH plugin: edit the model's reply, keep tool records, continue from your version. 改模型回复，保留工具记录，从你的版本继续。",
   "keywords": [
     "dsh",
     "deepseek-harness",

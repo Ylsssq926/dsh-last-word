@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" font-family="'Segoe UI','Microsoft YaHei','PingFang SC',sans-serif">
   <rect width="1200" height="660" rx="16" fill="#0d1117"/>
-  <text x="60" y="64" fill="#e6edf3" font-size="26" font-weight="600">界面一览</text>
-  <text x="60" y="94" fill="#8b949e" font-size="16">入口就在回复旁边，不打断阅读</text>
+  <text x="60" y="64" fill="#e6edf3" font-size="26" font-weight="600">界面</text>
 
   <!-- chat panel -->
   <g transform="translate(60,120)">
@@ -66,7 +65,7 @@
     <path d="M128 388v34h-24"/>
     <path d="M150 470v26h-46"/>
   </g>
-  <text x="60" y="446" fill="#4d8dff" font-size="14">编辑回复（图标 + 悬停提示）</text>
+  <text x="60" y="446" fill="#4d8dff" font-size="14">编辑回复</text>
   <text x="60" y="520" fill="#4d8dff" font-size="14">‹n/m› 版本环 · 编辑提问 · 重新生成</text>
 
   <!-- dialog panel -->

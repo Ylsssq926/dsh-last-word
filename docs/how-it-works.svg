@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" font-family="'Segoe UI','Microsoft YaHei','PingFang SC',sans-serif">
   <rect width="1200" height="470" rx="16" fill="#0d1117"/>
-  <text x="60" y="66" fill="#e6edf3" font-size="26" font-weight="600">一次编辑发生了什么</text>
-  <text x="60" y="96" fill="#8b949e" font-size="16">改的是最终回复，任务不用从头再来</text>
+  <text x="60" y="66" fill="#e6edf3" font-size="26" font-weight="600">工作原理</text>
+  <text x="60" y="96" fill="#8b949e" font-size="16">只改最终回复，不重跑工具</text>
 
   <!-- card 1 -->
   <g transform="translate(60,130)">
     <rect width="320" height="200" rx="12" fill="#161b22" stroke="#2d333b"/>
     <circle cx="36" cy="40" r="16" fill="#315f9f"/>
     <text x="31" y="46" fill="#e6edf3" font-size="16">1</text>
-    <text x="64" y="46" fill="#e6edf3" font-size="19" font-weight="600">模型回复只是草稿</text>
+    <text x="64" y="46" fill="#e6edf3" font-size="19" font-weight="600">模型给出回复</text>
     <rect x="24" y="70" width="272" height="44" rx="8" fill="#1c2129"/>
-    <text x="40" y="97" fill="#8b949e" font-size="15">说教太多？结论不对？</text>
+    <text x="40" y="97" fill="#8b949e" font-size="15">对回复不满意</text>
     <rect x="24" y="126" width="272" height="44" rx="8" fill="#1c2129"/>
-    <text x="40" y="153" fill="#8b949e" font-size="15">不用重新生成整轮</text>
+    <text x="40" y="153" fill="#8b949e" font-size="15">不用整轮重新生成</text>
   </g>
 
   <!-- arrow 1 -->
@@ -26,9 +26,9 @@
     <rect width="320" height="200" rx="12" fill="#161b22" stroke="#4d8dff" stroke-opacity="0.6"/>
     <circle cx="36" cy="40" r="16" fill="#315f9f"/>
     <text x="31" y="46" fill="#e6edf3" font-size="16">2</text>
-    <text x="64" y="46" fill="#e6edf3" font-size="19" font-weight="600">你改最终回复</text>
+    <text x="64" y="46" fill="#e6edf3" font-size="19" font-weight="600">直接改回复</text>
     <rect x="24" y="70" width="272" height="86" rx="8" fill="#1c2129"/>
-    <text x="40" y="98" fill="#e6edf3" font-size="15">正文或思考文本，直接改写</text>
+    <text x="40" y="98" fill="#e6edf3" font-size="15">正文或思考文本</text>
     <text x="40" y="126" fill="#8b949e" font-size="14">Ctrl + Enter 保存</text>
     <g transform="translate(252,160)" stroke="#b9e1ff" stroke-width="2" fill="none" stroke-linecap="round">
       <path d="M0 16h14"/>
@@ -49,25 +49,23 @@
     <text x="31" y="46" fill="#e6edf3" font-size="16">3</text>
     <text x="64" y="46" fill="#e6edf3" font-size="19" font-weight="600">从你的版本继续</text>
     <rect x="24" y="70" width="232" height="44" rx="8" fill="#1c2129"/>
-    <text x="40" y="97" fill="#e6edf3" font-size="15">新版本接着干活</text>
+    <text x="40" y="97" fill="#e6edf3" font-size="15">新版本继续对话</text>
     <rect x="24" y="126" width="232" height="44" rx="8" fill="#1c2129"/>
-    <text x="40" y="153" fill="#8b949e" font-size="15">‹n/m› 随手切回任何一版</text>
+    <text x="40" y="153" fill="#8b949e" font-size="15">‹n/m› 切换版本</text>
   </g>
 
   <!-- preservation bar -->
   <g transform="translate(60,362)">
     <rect width="1080" height="64" rx="12" fill="#161b22" stroke="#2d333b"/>
     <g fill="#3fb950" font-size="16">
-      <text x="36" y="39">✓</text>
-      <text x="296" y="39">✓</text>
-      <text x="576" y="39">✓</text>
-      <text x="836" y="39">✓</text>
+      <text x="119" y="39">✓</text>
+      <text x="487" y="39">✓</text>
+      <text x="831" y="39">✓</text>
     </g>
     <g fill="#e6edf3" font-size="16">
-      <text x="62" y="39">工具记录一条不丢</text>
-      <text x="322" y="39">查过的资料还在</text>
-      <text x="602" y="39">跑过的命令还在</text>
-      <text x="862" y="39">原对话永远留底</text>
+      <text x="145" y="39">工具记录保留</text>
+      <text x="513" y="39">原对话保留</text>
+      <text x="857" y="39">随时切回旧版本</text>
     </g>
   </g>
 </svg>
