@@ -1,0 +1,16 @@
+import './core.check.mjs';
+import assert from 'node:assert/strict';
+import {Session,SESSION_FORMAT_VERSION} from '@deepseek-ai/dsh-session';
+import {branchAsAssistant,locate} from './core.js';
+const events=[];
+const add=(type,data,surfaceOp)=>events.push({type,data,seq:events.length,time:1,...(surfaceOp?{surfaceOp}:{})});
+add('turn/start',{turn:1});add('step/start',{turn:1,step:1});
+add('user/message',{id:'u',role:'user',source:{kind:'user'},content:[{type:'text',text:'任务'}]},'append');
+add('assistant/message',{turn:1,step:1,stream:[],message:{id:'a',role:'assistant',source:{kind:'model',provider:'p',model:'m',replayState:{old:1}},content:[{type:'reasoning',text:'旧思考'},{type:'text',text:'回答'}]}},'append');
+add('step/end',{turn:1,step:1});add('turn/end',{turn:1,reason:{kind:'completed'}});
+let session;let n=0;
+const r=await branchAsAssistant({readSession:async()=>({events,session:{id:'s'}}),uuid:()=>`id-${++n}`,create:async q=>{session=Session.create(q.sessionId,q.seed,{version:SESSION_FORMAT_VERSION,id:q.sessionId,createdAt:1,...q.meta},q.inheritedEventCount);return{agent:{session},dispose:async()=>{}}},flush:async()=>true},'s','a','新思考',locate(events,'a','reasoning').text,undefined,'reasoning');
+assert.equal(r.ok,true);
+assert.deepEqual(session.deriveMessages().at(-1).content,[{type:'reasoning',text:'新思考'},{type:'text',text:'回答'}]);
+assert.equal(session.deriveMessages().at(-1).source.replayState,undefined);
+console.log('Reasoning field branch checks passed.');

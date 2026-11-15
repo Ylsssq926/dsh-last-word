@@ -1,0 +1,33 @@
+import './tool-task.check.mjs';
+import './versions.check.mjs';
+import './ring.check.mjs';
+import './sidebar.check.mjs';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {runInNewContext} from 'node:vm';
+const source=readFileSync(new URL('./client.js',import.meta.url),'utf8');
+const open=runInNewContext(`${source}\nreplyEditorOpenBranch`,{AbortSignal,window:{__ModuleLoader__:{load(){}}}},{timeout:1000});
+function fake(ready){
+  const events=[];
+  return {events,sessions:{retain(id,options){events.push(['retain',id,options.source]);return {ready,release(){events.push(['release']);}};}},nav:{openSession(id){events.push(['open',id]);}}};
+}
+const success=fake(Promise.resolve({session:{getSnapshot:()=>({openState:'open'})}}));
+assert.equal(await open(success.sessions,success.nav,'child'),true);
+assert.deepEqual(success.events,[['retain','child','controllerOperation'],['open','child'],['release']]);
+const failure=fake(Promise.reject(new Error('load failed')));
+await assert.rejects(()=>open(failure.sessions,failure.nav,'child'),/load failed/);
+assert.deepEqual(failure.events,[['retain','child','controllerOperation'],['release']]);
+const errorState=fake(Promise.resolve({session:{getSnapshot:()=>({openState:'error',openError:{message:'history invalid'}})}}));
+await assert.rejects(()=>open(errorState.sessions,errorState.nav,'child'),/history invalid/);
+assert.deepEqual(errorState.events,[['retain','child','controllerOperation'],['release']]);
+let settle;
+const delayed=fake(new Promise(resolve=>{settle=resolve;}));let current=true;
+const inFlight=open(delayed.sessions,delayed.nav,'child',()=>current);
+current=false;settle({session:{getSnapshot:()=>({openState:'open'})}});
+assert.equal(await inFlight,false);
+assert.deepEqual(delayed.events,[['retain','child','controllerOperation'],['release']]);
+assert.equal(await open(delayed.sessions,delayed.nav,'child',()=>false),false);
+const failedNavigation=fake(Promise.resolve({session:{getSnapshot:()=>({openState:'open'})}}));
+await assert.rejects(()=>open(failedNavigation.sessions,{openSession(){throw new Error('navigation failed');}},'child'),/navigation failed/);
+assert.deepEqual(failedNavigation.events,[['retain','child','controllerOperation'],['release']]);
+console.log('Branch navigation helper checks passed: ready-before-open, release, history failure, navigation failure and stale page. No DOM rendering simulated.');

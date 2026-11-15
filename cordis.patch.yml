@@ -1,0 +1,4 @@
+- insert:
+    - id: dsh-last-word
+      name: 'dsh-last-word'
+      config: {}
