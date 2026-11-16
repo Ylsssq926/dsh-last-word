@@ -24,9 +24,9 @@
   <a href="README.pt.md">Português</a>
 </p>
 
-Das Modell hat acht Dateien gelesen, drei Befehle ausgeführt und sich bei einer Zahl in der Schlussfolgerung vertan. Neu generieren heißt: alle Tools laufen noch einmal.
+Das Modell hat acht Dateien gelesen, drei Befehle ausgeführt und sich bei einer Zahl in der Schlussfolgerung vertan. Es hält das für die endgültige Antwort.
 
-Bearbeite die Antwort direkt. Die Tool-Datensätze bleiben vollständig erhalten, und das Gespräch wird ab deiner Version fortgesetzt.
+Du nicht. Bearbeite die Antwort direkt — die Tool-Datensätze bleiben vollständig erhalten, und das Gespräch läuft ab deiner Version weiter. Neu generieren würde alle Tools noch einmal laufen lassen; du nicht. Du hast das letzte Wort.
 
 ## Funktionen
 

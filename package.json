@@ -3,7 +3,7 @@
   "version": "0.3.1",
   "private": true,
   "type": "module",
-  "description": "DSH plugin: edit the model's reply without re-running tools, continue from your version. 改模型回复，不重跑工具，从你的版本继续。",
+  "description": "DSH plugin: take back the last word — edit the model's reply without re-running tools, continue from your version. 夺回最终解释权：改模型回复，不重跑工具，从你的版本继续。",
   "keywords": [
     "dsh",
     "deepseek-harness",

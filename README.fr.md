@@ -24,9 +24,9 @@
   <a href="README.pt.md">Português</a>
 </p>
 
-Le modèle a lu huit fichiers, exécuté trois commandes, et s’est trompé sur un nombre dans la conclusion. Régénérer signifie relancer tous les outils.
+Le modèle a lu huit fichiers, exécuté trois commandes et s’est trompé sur un nombre dans la conclusion. Il considère que c’est la réponse finale.
 
-Modifiez directement la réponse. Les traces d’outils sont conservées intactes et la conversation continue depuis votre version.
+Pas vous. Modifiez directement la réponse : les traces d’outils restent intactes et la conversation continue depuis votre version. Régénérer relancerait tous les outils ; pas vous. Vous avez le dernier mot.
 
 ## Fonctionnalités
 

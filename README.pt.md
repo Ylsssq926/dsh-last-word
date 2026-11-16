@@ -24,9 +24,9 @@
   Português ·
 </p>
 
-O modelo leu oito arquivos, executou três comandos e errou um número na conclusão. Regenerar significa executar todas as ferramentas de novo.
+O modelo leu oito arquivos, executou três comandos e errou um número na conclusão. Ele trata isso como a resposta final.
 
-Edite a resposta diretamente. Os registros de ferramentas são mantidos intactos e a conversa continua a partir da sua versão.
+Você não. Edite a resposta diretamente: os registros de ferramentas são mantidos intactos e a conversa continua a partir da sua versão. Regenerar executaria todas as ferramentas de novo; você não precisa. Você tem a última palavra.
 
 ## Funções
 

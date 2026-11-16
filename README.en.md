@@ -24,9 +24,9 @@
   <a href="README.pt.md">Português</a>
 </p>
 
-The model read eight files, ran three commands, and got one number wrong in the conclusion. Regenerating means running every tool again.
+The model read eight files, ran three commands, and got one number wrong in the conclusion. It treats that as the final answer.
 
-Just edit the reply. Tool records stay intact, and the conversation continues from your version.
+You don't. Edit the reply directly — tool records stay intact and the conversation continues from your version. Regenerating would re-run every tool; you don't have to. You get the last word.
 
 ## Features
 
