@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="Apache-2.0"></a>
-  <img src="https://img.shields.io/badge/version-0.3.1-brightgreen.svg" alt="0.3.1">
+  <a href="https://github.com/Ylsssq926/dsh-last-word/releases"><img src="https://img.shields.io/github/v/release/Ylsssq926/dsh-last-word?color=brightgreen" alt="release"></a>
   <img src="https://img.shields.io/badge/DSH-%E2%89%A50.2.2--rc.1-orange.svg" alt="DSH ≥0.2.2-rc.1">
   <img src="https://img.shields.io/badge/tests-9%2F9-success.svg" alt="tests 9/9">
   <img src="https://img.shields.io/badge/i18n-8%20languages-purple.svg" alt="8 languages">
